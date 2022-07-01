@@ -1,5 +1,6 @@
 <template>
     <div class="plat-table">
+        <Message :msg="msg" v-show="msg" />
         <table class="list-table">
             <tr>
                 <th>ID</th>
@@ -19,9 +20,9 @@
                 <td>{{ sugestao.valor }}</td>
                 <td>{{ sugestao.preco }}</td>
                 <td>
-                    <select name="status" id="status">
+                    <select name="status" id="status" @change="updateSugestao($event, sugestao.id)">
                         <option value="">Selecione</option>
-                        <option v-for="s in status" :key="s.id" value="s.nome" :selected="sugestao.status == s.nome">
+                        <option v-for="s in status" :key="s.id" :value="s.nome" :selected="sugestao.status == s.nome">
                             {{ s.nome }}
                         </option>
                     </select>
@@ -35,6 +36,7 @@
 </template>
 
 <script>
+import Message from './Message.vue'
 
 export default {
     name:"Dashboard",
@@ -42,7 +44,8 @@ export default {
         return {
             sugestoes: null,
             sugestao_id: null,
-            status: [] 
+            status: [],
+            msg: null
         }
     },
     methods: {
@@ -68,12 +71,36 @@ export default {
             });
 
             const res = await req.json();
+            
+            this.msg = `Sugestão removido com sucesso!`;
+            
+            setTimeout(() => this.msg = "",3000);
 
             this.getSugestoes();
+        },
+        async updateSugestao(event, id){
+            const option = event.target.value;
+
+            const dataJson = JSON.stringify({status:option});
+
+            const req = await fetch(`http://localhost:3000/sugestoes/${id}`, {
+                method: "PATCH",
+                headers: { "Content-Type": "application/json" },
+                body: dataJson
+            });
+
+            const res = await req.json();
+            
+            this.msg = `Sugestão n° ${res.id} foi atualiuzado para ${res.status}!`;
+            
+            setTimeout(() => this.msg = "",3000);
         }
     },
     mounted() {
         this.getSugestoes();
+    },
+    components: {
+        Message
     }
 }
 </script>

@@ -54,17 +54,8 @@
       "sugestao": "League Of Legends",
       "valor": "Não Pago",
       "preco": null,
-      "status": "Pendente",
+      "status": "Piada",
       "id": 1
-    },
-    {
-      "nome": "YakoNi",
-      "tipo": "Outros",
-      "sugestao": "League Of Legends",
-      "valor": "Não Pago",
-      "preco": null,
-      "status": "Pendente",
-      "id": 2
     }
   ]
 }
