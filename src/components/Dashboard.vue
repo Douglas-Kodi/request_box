@@ -28,7 +28,9 @@
                     </select>
                 </td>
                 <td>
-                    <button class="delete-btn" @click="deleteSugestao(sugestao.id)">FF</button>
+                    <button class="delete-btn" @click="deleteSugestao(sugestao.id)">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill-rule="evenodd" d="M5.72 5.72a.75.75 0 011.06 0L12 10.94l5.22-5.22a.75.75 0 111.06 1.06L13.06 12l5.22 5.22a.75.75 0 11-1.06 1.06L12 13.06l-5.22 5.22a.75.75 0 01-1.06-1.06L10.94 12 5.72 6.78a.75.75 0 010-1.06z"></path></svg>
+                    </button>
                 </td>
             </tr>
         </table>
@@ -66,13 +68,14 @@ export default {
             this.status = data;
         },
         async deleteSugestao(id){
+            var id_alert = id;
             const req = await fetch(`http://localhost:3000/sugestoes/${id}`, {
                 method: "DELETE"
             });
 
             const res = await req.json();
             
-            this.msg = `Sugestão removido com sucesso!`;
+            this.msg = `Sugestão n° ${id_alert} removido com sucesso!`;
             
             setTimeout(() => this.msg = "",3000);
 
@@ -107,24 +110,45 @@ export default {
 
 <style scoped>
     .plat-table{
+        overflow: auto;
     }
     .list-table{
         margin:auto auto;
-        border:1px solid #fff;
         width:80%;
-        height:80%;
-        background-color:rgba(255, 255, 255, 0.8);
+        height:712px;
+        background-color:rgba(255, 255, 255, 1);
+        border-radius: 5px;
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    .list-table th, td{
+        padding: 10px;
     }
     .list-table th{
-        color:black;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        color: white;
         font-size: 18px;
         text-align: center;
         vertical-align: middle;
+        background-color: rgb(10, 145, 133);
     }
     .list-table td{
         color:black;
         font-size: 16px;
         text-align: center;
         vertical-align: middle;
+    }
+    .list-table select{
+        color:black;
+        font-size: 16px;
+        text-align: center;
+        vertical-align: middle;
+    }
+    .list-table tr:nth-child(even){
+        background-color: #f2f2f2;
+    }
+    .list-table tr:hover {
+        background-color: #ddd;
     }
 </style>

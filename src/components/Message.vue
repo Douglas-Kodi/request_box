@@ -1,6 +1,8 @@
 <template>
-    <div class="message-container">
-        <p>{{ msg }}</p>
+    <div class="container">
+        <div class="message-container">
+            <p>{{ msg }}</p>
+        </div>
     </div>
 </template>
 
@@ -14,6 +16,11 @@ export default {
 </script>
 
 <style scoped>
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     .message-container{
         color:#004085;
         background-color: #CCE5FF;
@@ -22,5 +29,7 @@ export default {
         padding:10px;
         max-width:80%;
         margin:30px auto;
+        align-content: center;
+        position:absolute;
     }
 </style>

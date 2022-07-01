@@ -144,6 +144,6 @@ export default {
     }
     .submit-btn:hover{
         transition:0.5s;
-        color:red;
+        color:green;
     }
 </style>
