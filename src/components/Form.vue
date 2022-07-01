@@ -77,7 +77,8 @@ export default {
                 tipo: this.tipo,
                 sugestao: this.sugestao,
                 valor: this.valor,
-                preco: this.preco
+                preco: this.preco,
+                status: "Pendente"
             }
 
             const dataJson = JSON.stringify(data);

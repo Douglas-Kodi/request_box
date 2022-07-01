@@ -29,7 +29,42 @@
       }
     ]
   },
+  "status": [
+    {
+      "id": 1,
+      "nome": "Pendente"
+    },
+    {
+      "id": 2,
+      "nome": "Nice"
+    },
+    {
+      "id": 3,
+      "nome": "Piada"
+    },
+    {
+      "id": 4,
+      "nome": "NT"
+    }
+  ],
   "sugestoes": [
-
+    {
+      "nome": "YakoNi",
+      "tipo": "Outros",
+      "sugestao": "League Of Legends",
+      "valor": "Não Pago",
+      "preco": null,
+      "status": "Pendente",
+      "id": 1
+    },
+    {
+      "nome": "YakoNi",
+      "tipo": "Outros",
+      "sugestao": "League Of Legends",
+      "valor": "Não Pago",
+      "preco": null,
+      "status": "Pendente",
+      "id": 2
+    }
   ]
 }
