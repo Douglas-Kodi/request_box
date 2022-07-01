@@ -30,9 +30,14 @@ export default {
         font-family: sans-serif;
         box-sizing: border-box;
     }
+    body{
+        background-image: url('/img/background.jpg');
+    }
     .main{
-        min-height:300px;
+        min-height:582px;
         margin:50px;
+        background-color:black;
+        opacity: 0.5;
     }
 </style>
 
