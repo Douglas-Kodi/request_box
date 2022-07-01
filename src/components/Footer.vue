@@ -13,7 +13,7 @@ export default {
 <style scoped>
     #footer{
         width:100%;
-        height:180px;
+        height:100px;
         background-color:rgb(10, 145, 133);
         color: black;
         display: flex;

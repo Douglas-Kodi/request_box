@@ -34,10 +34,9 @@ export default {
         background-image: url('/img/background.jpg');
     }
     .main{
-        min-height:582px;
-        margin:50px;
-        background-color:black;
-        opacity: 0.5;
+        min-height:712px;
+        margin:25px;
+        background-color:rgba(0, 0, 0, 0.5);
     }
 </style>
 

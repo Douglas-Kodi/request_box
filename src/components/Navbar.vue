@@ -26,7 +26,7 @@ export default {
     }
     #nav a{
         padding:5px 40px;
-        font-size:24px;
+        font-size:20px;
         color:black;
         transition:.5s;
     }

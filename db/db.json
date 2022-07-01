@@ -1,0 +1,35 @@
+{
+  "jogos": {
+    "tipos": [
+      {
+        "id": 1,
+        "nome": "Steam"
+      },
+      {
+        "id": 2,
+        "nome": "Epic Games"
+      },
+      {
+        "id": 3,
+        "nome": "Origin"
+      },
+      {
+        "id": 4,
+        "nome": "Outros"
+      }
+    ],
+    "variaves": [
+      {
+        "id": 1,
+        "nome": "Não Pago"
+      },
+      {
+        "id": 2,
+        "nome": "Pago"
+      }
+    ]
+  },
+  "sugestoes": [
+
+  ]
+}
