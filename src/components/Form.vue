@@ -29,12 +29,13 @@
             <div>
                 <label for="valor">Valor:</label>
                 <section v-for="variavel in variaves" :key="variavel.id">
-                    <input type="radio" name="variavel" :value="variavel.nome" v-model="valor">
+                    <input type="radio" name="variavel" :value="variavel.nome" v-model="valor" required>
                     <span>{{ variavel.nome }}</span>
                 </section>
             </div>
             <div>
-                <input type="text" name="preco" v-model="preco" placeholder="Digite o valor do jogo..." />
+                <input type="text" v-if="valor=='Pago'" name="preco" v-model="preco" placeholder="Digite o valor do jogo..." required />
+                <input type="text" v-else name="preco" v-model="preco" placeholder="Free" disabled />
             </div>    
             <div>
                 <input type="submit" class="submit-btn" value="Adicionar" />
@@ -134,6 +135,12 @@ export default {
         width:100%;
         padding: 10px 10px;
         border-radius:5px;
+    }
+    input:disabled{
+        background-color:gray;
+    }
+    input:disabled::placeholder{
+        color:white;
     }
     .submit-btn{
         width:100px;

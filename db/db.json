@@ -54,7 +54,7 @@
       "sugestao": "League Of Legends",
       "valor": "Não Pago",
       "preco": null,
-      "status": "Nice",
+      "status": "NT",
       "id": 1
     },
     {
@@ -63,7 +63,7 @@
       "sugestao": "League Of Legends",
       "valor": "Não Pago",
       "preco": null,
-      "status": "Piada",
+      "status": "NT",
       "id": 2
     },
     {
@@ -72,7 +72,7 @@
       "sugestao": "League Of Legends",
       "valor": "Não Pago",
       "preco": null,
-      "status": "Pendente",
+      "status": "NT",
       "id": 3
     },
     {
@@ -227,51 +227,6 @@
       "preco": null,
       "status": "NT",
       "id": 20
-    },
-    {
-      "nome": "YakoNi",
-      "tipo": "Outros",
-      "sugestao": "League Of Legends",
-      "valor": "Não Pago",
-      "preco": null,
-      "status": "NT",
-      "id": 21
-    },
-    {
-      "nome": "YakoNi",
-      "tipo": "Outros",
-      "sugestao": "League Of Legends",
-      "valor": "Não Pago",
-      "preco": null,
-      "status": "NT",
-      "id": 22
-    },
-    {
-      "nome": "YakoNi",
-      "tipo": "Outros",
-      "sugestao": "League Of Legends",
-      "valor": "Não Pago",
-      "preco": null,
-      "status": "NT",
-      "id": 23
-    },
-    {
-      "nome": "YakoNi",
-      "tipo": "Outros",
-      "sugestao": "League Of Legends",
-      "valor": "Não Pago",
-      "preco": null,
-      "status": "NT",
-      "id": 24
-    },
-    {
-      "nome": "YakoNi",
-      "tipo": "Outros",
-      "sugestao": "League Of Legends",
-      "valor": "Não Pago",
-      "preco": null,
-      "status": "NT",
-      "id": 25
     }
   ]
 }
