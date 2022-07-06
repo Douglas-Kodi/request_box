@@ -14,11 +14,13 @@
             </tr>
             <tr v-for="sugestao in sugestoes" :key="sugestao.id">
                 <td>{{ sugestao.id }}</td>
-                <td>{{ sugestao.nome }}</td>
+                <td v-if="(sugestao.nome=='')||(sugestao.nome==null)">Anonymous</td>          
+                <td v-else>{{ sugestao.nome }}</td>
                 <td>{{ sugestao.tipo }}</td>
                 <td>{{ sugestao.sugestao }}</td>
                 <td>{{ sugestao.valor }}</td>
-                <td>{{ sugestao.preco }}</td>
+                <td v-if="sugestao.valor=='Pago'">{{ sugestao.preco }}</td>          
+                <td v-else>Free</td>
                 <td>
                     <select name="status" id="status" @change="updateSugestao($event, sugestao.id)">
                         <option value="">Selecione</option>
