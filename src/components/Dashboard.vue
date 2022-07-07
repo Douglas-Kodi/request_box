@@ -114,10 +114,11 @@ export default {
     .plat-table{
         overflow: auto;
         max-height:712px;
+        width:100%;
     }
     .list-table{
         margin:auto auto;
-        width:80%;
+        width:100%;
         background-color:rgba(255, 255, 255, 1);
         border-radius: 5px;
         border-collapse: collapse;
