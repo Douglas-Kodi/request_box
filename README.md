@@ -27,3 +27,7 @@ npm run backend
 ```sh
 npm run dev
 ```
+
+- Verify they were started on the correct ports:
+bd: http://localhost:3000
+dev: http://localhost:3001/
